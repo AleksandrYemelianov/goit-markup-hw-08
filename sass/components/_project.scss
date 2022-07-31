@@ -1,0 +1,86 @@
+// Список фильтр
+.project-btn__list {
+    @include flexbox (flex, null, center, null, null);
+    margin-bottom: 50px;
+}
+
+.project-btn__list .project-btn__item+.project-btn__item {
+    margin-left: 8px;
+}
+
+// Проекты
+
+.project {
+    @include flexbox (flex, null, null, null, wrap);
+    padding: 0;
+    margin: 0;
+    margin-left: -30px;
+    margin-bottom: -30px;
+
+    &__item {
+            margin-left: 30px;
+            margin-bottom: 30px;
+            flex-basis: calc(100% / 3 - 30px);
+            /* outline: 2px solid greenyellow; */
+        }
+    
+    &__link {
+            @include flexbox (block, null, null, null, null);
+            transition: box-shadow var(--transition);
+    
+            &:hover,
+            &:focus {
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                    1px 4px 6px rgba(0, 0, 0, 0.16);
+            }
+        }
+    
+    &__wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+    
+    &__descrip {
+            @include flexbox (flex, null, center, center, null);
+            padding: 24px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: var(--overlay-color);
+    
+            @include font (null, 400, 18px, 1.56, null);
+    
+            color: #ffffff;
+    
+            transform: translateY(100%);
+            transition: transform var(--transition);
+    
+            .project__item:hover &,
+            .project__item:focus & {
+                transform: translateY(0%);
+            }
+        }
+    
+    &__content {
+            padding: 20px 24px;
+            border: 1px solid var(--border-project-color);
+            border-top: 0;
+        }
+    
+    &__title {
+            margin-bottom: 4px;
+    
+            @include font (null, bold, 18px, 2, 0.06em, null);
+    
+            color: var(--primary-text-color);
+        }
+    
+    &__text {
+            @include font (null, null, 16px, 1.87, null, null);
+    
+            color: var(--secondary-text-color);
+        }
+}
+

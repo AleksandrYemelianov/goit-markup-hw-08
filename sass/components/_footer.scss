@@ -1,0 +1,42 @@
+.footer {
+    @include flexbox (flex, null, null, null, null);
+
+    background-color: var(--footer-bg-color);
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+        &__wrapper {
+            @include flexbox (flex, null, null, baseline, null);
+        }
+    
+        &__text {
+            @include flexbox (block, null, null, null, null);
+            margin-bottom: 9px;
+            color: var(--primary-white-color);
+
+            @include font (null, null, 14px, 1.71, null);
+            
+        }
+}
+
+
+
+.footer-contact__link {
+    color: var(--telemail-footer-color);
+
+    @include font (null, null, 14px, 1.71, null);
+    
+    transition: color var(--transition);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+}
+
+
+
+.footer-contact__list .footer-contact__item:not(:last-child) {
+    margin-bottom: 9px;
+}

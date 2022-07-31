@@ -1,0 +1,25 @@
+.hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-bg-color);
+    background-image: linear-gradient(to right,
+            var(--firsty-bg-color),
+            var(--firsty-bg-color)),
+        url(../images/Img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__title {
+            @include flexbox (block, null, null, null, null);
+            margin-bottom: 30px;
+    
+            @include font (null, 900, 44px, 1.36, 0.06em, null);
+            color: var(--primary-white-color);
+            text-transform: uppercase;
+        }
+}

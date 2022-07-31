@@ -1,0 +1,48 @@
+.checkbox {
+    position: relative;
+
+    margin-bottom: 30px;
+    @include flexbox (flex, null, space-evenly, center, null);
+    
+    &__input {
+            position: relative;
+            top: 0;
+            white-space: nowrap;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            border: 0;
+            padding: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            margin: -1px;
+        }
+    
+    &__wrapper {
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            display: flex;
+            align-items: center;
+    
+            width: 16px;
+            height: 15px;
+            border: 2px solid var(--primary-text-color);
+            border-radius: 2px;
+            background-size: contain;
+    
+            transform: translateY(-50%);
+            transition: background-color var(--transition), border-color var(--transition);
+        }
+    
+    &__input:checked+&__wrapper {
+            background-color: var(--accent-color);
+            border-color: transparent;
+        }
+    
+    &__enable {
+            width: 16px;
+            height: 15px;
+            fill: var(--primary-white-color);
+        }
+}

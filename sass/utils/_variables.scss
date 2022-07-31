@@ -1,0 +1,37 @@
+:root {
+    /* Основной шрифт */
+    --primary-font: Roboto, sans-serif;
+    /* Дополнительный шрифт */
+    --secondary-font: Raleway, sans-serif;
+
+    /* Цветовые темы проекта */
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --border-project-color: #eeeeee;
+    /* Цвет КНОПКИ */
+    --accent-color: #2196f3;
+    --button-color: #f5f4fa;
+    --secondary-btn-color: #188ce8;
+    --primary-white-color: #ffffff;
+    /* Цвет фон ГЕРОЙ и ФУТЕР */
+    --footer-bg-color: #2f303a;
+    --firsty-bg-color: rgba(47, 48, 58, 0.4);
+    --secondary-bg-color: #c4c4c4;
+    /* Цвет тел и почта ФУТЕР */
+    --telemail-footer-color: rgba(255, 255, 255, 0.6);
+    --form-footer-color: rgba(255, 255, 255, 0.3);
+    /*  Цвет соцситей */
+    --firsty-social-color: #afb1b8;
+    --footer-social-color: rgba(255, 255, 255, 0.1);
+    /* Цвет фон оверлей */
+    --overlay-color: rgba(33, 150, 243, 0.9);
+    /* Цвет бекдропа */
+    --backdrop-color: rgba(0, 0, 0, 0.2);
+    /* Цвет текст в ФОРМЕ */
+    --text-form-color: rgba(117, 117, 117, 0.5);
+    --border-form-color: rgba(33, 33, 33, 0.2);
+
+    /* Переходы ховер фокус */
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}

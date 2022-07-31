@@ -1,0 +1,11 @@
+// Заголовок секции главной страницы
+
+.title {
+    @include flexbox (block, null, null, null, null);
+    margin-bottom: 50px;
+
+    @include font (null, bold, 36px, 1.12, null, null);
+    color: var(--primary-text-color);
+    
+    text-align: center;
+}

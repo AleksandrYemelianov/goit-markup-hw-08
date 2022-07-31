@@ -1,0 +1,16 @@
+@mixin font( $ff: inherit, $fw: 500, $fs: 16px, $lh: 1.62, $ls: 0.03em, $fSt: normal) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    font-style: $fSt;
+};
+
+@mixin flexbox ($type: flex, $flDir: row, $justCnt: center, $alItem: center, $flWrp: wrap) {
+    display: $type;
+    flex-direction: $flDir;
+    justify-content: $justCnt;
+    align-items: $alItem;
+    flex-wrap: $flWrp;
+}

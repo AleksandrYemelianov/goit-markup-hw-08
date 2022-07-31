@@ -1,0 +1,59 @@
+// Основные социальные иконки
+.social {
+    @include flexbox (flex, null, center, null, null);
+
+    &__list:not(:last-child) {
+        margin-right: 10px;
+        }
+    
+    &__link {
+        @include flexbox (flex, null, center, center, null);
+        width: 44px;
+        height: 44px;
+
+        border-radius: 50%;
+
+        &--light {
+            color: var(--firsty-social-color);
+            transition: color var(--transition),
+                background-color var(--transition);
+        }
+
+        &--dark {
+            color: var(--primary-white-color);
+            background-color: var(--footer-social-color);
+
+            transition: background-color var(--transition);
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--primary-white-color);
+            background-color: var(--accent-color);
+        }
+    }
+    
+    &__icon {
+        @include flexbox (flex, null, null, null, null);
+        width: 20px;
+        height: 20px;
+
+        fill: currentColor;
+    }
+}
+
+// Дополнительные социальные иконки
+.footer-social {
+    margin-left: 70px;
+
+    &__text {
+        @include flexbox (block, null, null, null, null);
+        margin-bottom: 20px;
+
+        @include font (null, bold, 14px, 1.14, null, null);
+        color: var(--primary-white-color);
+
+        text-transform: uppercase;
+    }
+}
+

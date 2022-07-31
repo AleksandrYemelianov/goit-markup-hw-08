@@ -1,0 +1,41 @@
+.feature {
+    @include flexbox (flex, null, null, null, null);
+
+    &__thumb {
+            @include flexbox (flex, null, center, center, null);
+            
+            height: 120px;
+            background-color: var(--button-color);
+    
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+    
+    &__icon {
+            width: 70px;
+            height: 70px;
+        }
+    
+    &__subtitle {
+            max-width: 270px;
+            margin-bottom: 10px;
+
+            @include font (null, bold, 14px, 1.14, null, null);
+
+            color: var(--primary-text-color);
+            text-transform: uppercase;
+        }
+    
+    &__description {
+            max-width: 270px;
+
+            @include font (null, null, 14px, 1.71, null, null);
+
+            color: var(--secondary-text-color);
+        }
+    
+    & .feature__item+.feature__item {
+            margin-left: 30px;
+        }
+}
+

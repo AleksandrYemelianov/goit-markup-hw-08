@@ -1,0 +1,51 @@
+.header {
+    border-bottom: 1px solid #ececec;
+
+    &__wrappe {
+            @include flexbox (flex, null, null, center, null);
+        }
+}
+
+.header-contact {
+    @include flexbox (flex, null, null, null, null);
+    margin-right: 0;
+    margin-left: auto;
+
+    &__link {
+            @include flexbox (flex, null, center, center, null);
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-left: 0;
+    
+            @include font(null, 500, 14px, 1.2, 0.02em, null);
+            color: var(--secondary-text-color);
+            transition: color var(--transition);
+
+                &:hover,
+                &:focus {
+                        color: var(--accent-color);
+                    }
+        }
+    
+    &__icon {
+            margin-right: 10px;
+    
+            fill: currentColor;
+
+            &--envelope {
+                        width: 16px;
+                        height: 12px;}
+                
+            &--smartphone {
+                        width: 10px;
+                        height: 16px;}
+        }
+}
+
+.header-contact .header-contact__item+.header-contact__item {
+    margin-left: 50px;
+}
+
+
+
+

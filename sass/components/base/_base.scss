@@ -1,0 +1,13 @@
+@import './reset';
+
+body {
+    background-color: var(--primary-white-color);
+    
+    @include font (var(--primary-font), null, null, null, 0.03em, null);
+    color: var(--primary-text-color);
+    
+}
+
+.section {
+    @extend %section-padding;
+}

@@ -1,0 +1,35 @@
+.clients {
+    @include flexbox (flex, null, center, null, null);
+
+    &__link {
+            @include flexbox (flex, null, center, center, null);
+            
+            width: 170px;
+            height: 92px;
+    
+            border: 1px solid var(--firsty-social-color);
+            border-radius: 4px;
+    
+            color: var(--firsty-social-color);
+    
+            transition: color var(--transition), border-color var(--transition);
+    
+            &:hover,
+            &:focus {
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+            };
+        }
+    
+    &__icon {
+            @include flexbox (flex, null, null, null, null);
+            width: 106px;
+            height: 60px;
+            fill: currentColor;
+        }
+    
+    & &__item+&__item {
+            margin-left: 30px;
+        }
+}
+

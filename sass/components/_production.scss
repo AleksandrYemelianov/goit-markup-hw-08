@@ -1,0 +1,31 @@
+.production {
+    padding-top: 0;
+
+    &__list {
+            @include flexbox (flex, null, null, null, null);
+        }
+    &__wrapper {
+            position: relative;
+        }
+    
+    &__description {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 27px;
+            background: rgba(47, 48, 58, 0.8);
+    
+            @include font(null, 700, 14px, 1.14, null, null);
+    
+            color: var(--primary-white-color);
+    
+            text-align: center;
+            text-transform: uppercase;
+        }
+}
+
+.production__list .production__item+.production__item {
+    margin-left: 30px;
+}
+

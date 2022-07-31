@@ -1,0 +1,45 @@
+.subs-form {
+    @include flexbox (flex, null, null, flex-end, null);
+    width: calc(100% / 2);
+    margin-left: auto;
+
+    &__wrapper {
+            @include flexbox (flex, column, null, null, null);
+            width: 100%;
+            margin-right: 12px;
+        }
+
+    &__label {
+            margin-bottom: 20px;
+    
+            @include font(null, bold, 14px, 1.14, null, null);
+            color: var(--primary-white-color);
+            text-transform: uppercase;
+        }
+    
+    &__icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-white-color);
+            margin-left: 10px;
+        }
+
+    &__input {
+            padding: 15px;
+            caret-color: var(--telemail-footer-color);
+    
+            border: 1px solid var(--form-footer-color);
+            border-radius: 4px;
+            outline: transparent;
+            background-color: transparent;
+        }
+
+    &__input::placeholder {
+            @include font(null, null, 16px, 1.25, null);
+            color: var(--telemail-footer-color);
+        }
+    
+    &__input:not(:placeholder-shown) {
+            color: var(--primary-white-color);
+        }
+}

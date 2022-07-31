@@ -1,0 +1,48 @@
+.nav {
+    @include flexbox (flex, null, null, center, null);
+
+    &__list {
+            @include flexbox (flex, null, null, null, null);
+            margin-left: 93px;
+            padding-left: 0;
+        }
+    
+    &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+    
+    &__link {
+            @include flexbox (block, null, null, null, null);
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            @include font (null, 500, 14px, 1.2, 0.02em, null);
+           
+            color: var(--primary-text-color);
+            transition: color var(--transition);
+    
+        &:hover,
+        &:focus {
+                color: var(--accent-color);
+            }
+    
+        &--current {
+                position: relative;
+    
+                background-color: var(--primary-white-color);
+                color: var(--accent-color);
+    
+            }
+    
+        &--current::after {
+                position: absolute;
+                content: "";
+                height: 4px;
+                width: 100%;
+                background-color: var(--accent-color);
+                border-radius: 2px;
+                left: 0;
+                bottom: 0;
+            }
+        }
+}
