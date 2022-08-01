@@ -1,7 +1,7 @@
 .logo {
     @include flexbox (block, null, null, null, null);
 
-    @include font (var(--secondary-font), bold, 26px, 1.2, null, null );
+    @include font (var(--secondary-font), bold, 24px, 1.17, null, null );
 
     &--dark {
             color: var(--primary-text-color);
@@ -18,3 +18,8 @@
         }
 }
 
+@media screen and (min-width: 1200px) {
+    .logo {
+        @include font (var(--secondary-font), bold, 26px, 1.2, null, null);
+    }
+}

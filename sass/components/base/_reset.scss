@@ -18,6 +18,10 @@ img {
     display: block;
 }
 
+a {
+    color: currentColor;
+}
+
 .list {
     list-style: none;
 }
@@ -25,3 +29,4 @@ img {
 .link {
     text-decoration: none;
 }
+
