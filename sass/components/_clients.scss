@@ -1,35 +1,43 @@
 .clients {
-    @include flexbox (flex, null, center, null, null);
+    @include flexbox (flex, null, null, null, wrap);
+    margin-right: -30px;
+    margin-bottom: -30px;
 
-    &__link {
-            @include flexbox (flex, null, center, center, null);
-            
-            width: 170px;
-            height: 92px;
+    @include mq(desktop) {
+    @include flexbox (flex, null, center, null, null);
+    }
+
+    &__item {
+        @include flexbox (flex, null, center, center, null);
+        flex-basis: calc(100% / 2 - 30px);
+        height: 92px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        border: 1px solid var(--firsty-social-color);
+        border-radius: 4px;
+        color: var(--firsty-social-color);
     
-            border: 1px solid var(--firsty-social-color);
-            border-radius: 4px;
+        transition: color var(--transition), border-color var(--transition);
     
-            color: var(--firsty-social-color);
-    
-            transition: color var(--transition), border-color var(--transition);
-    
-            &:hover,
-            &:focus {
-                border-color: var(--accent-color);
-                color: var(--accent-color);
-            };
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        @include mq(tablet) {
+            flex-basis: calc(100% / 3 - 30px);}
+
+        @include mq(desktop) {
+            flex-basis: calc(100% / 6 - 30px);
+        }
         }
     
     &__icon {
-            @include flexbox (flex, null, null, null, null);
             width: 106px;
             height: 60px;
             fill: currentColor;
-        }
-    
-    & &__item+&__item {
-            margin-left: 30px;
         }
 }
 

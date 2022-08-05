@@ -1,4 +1,8 @@
 .production {
+    @include mq(notDesktop){
+        display: none;
+    }
+    @include mq(desktop){
     padding-top: 0;
 
     &__list {
@@ -23,9 +27,9 @@
             text-align: center;
             text-transform: uppercase;
         }
-}
 
-.production__list .production__item+.production__item {
-    margin-left: 30px;
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    }   
 }
-

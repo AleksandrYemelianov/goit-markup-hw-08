@@ -44,7 +44,8 @@
 
 // Дополнительные социальные иконки
 .footer-social {
-    margin-left: 70px;
+    text-align: center;
+    margin-bottom: 60px;
 
     &__text {
         @include flexbox (block, null, null, null, null);

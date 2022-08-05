@@ -1,17 +1,22 @@
 .footer {
-    @include flexbox (flex, null, null, null, null);
+    // @include flexbox (flex, null, null, null, null);
 
     background-color: var(--footer-bg-color);
 
     padding-top: 60px;
     padding-bottom: 60px;
 
+    &__nav {
+        text-align: center;
+        margin-bottom: 60px;
+
+    }
         &__wrapper {
-            @include flexbox (flex, null, null, baseline, null);
+            // @include flexbox (flex, null, null, baseline, null);
         }
     
         &__text {
-            @include flexbox (block, null, null, null, null);
+            // @include flexbox (block, null, null, null, null);
             margin-bottom: 9px;
             color: var(--primary-white-color);
 

@@ -24,32 +24,37 @@
 
     @media screen and (min-width: 768px) {
         @include flexbox (flex, column, null, null, null);
+
         margin-right: 0;
         margin-left: auto;
-        }
-    @media screen and (min-width: 1200px){
+    }
+        @media screen and (min-width: 1200px){
         @include flexbox (null, row, null, null, null);
-        }
+    }
 
     &__item:not(:last-child) {
         margin-bottom: 10px;
         
-    @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1200px) {
         margin-bottom: 0;
         margin-right: 30px;
         }
-        }       
+    }       
     
     &__item {
-        @include font(null, 500, 14px, 1.2, 0.02em, null);
+        @include font(null, 500, 12px, 1.17, 0.02em, null);
         color: var(--secondary-text-color);
         transition: color var(--transition);
+
+        @media screen and (min-width: 1200px) {
+        @include font(null, null, 14px, 1.2, null, null);
         }
+    }
 
     &__item:hover,
     &__item:focus {
         color: var(--accent-color);
-        }
+    }
 
     &__link {
         @include flexbox (flex, null, null, center, null);
@@ -60,13 +65,25 @@
         fill: currentColor;
 
         &--envelope {
-            width: 16px;
-            height: 12px;}
+            width: 14px;
+            height: 10px;}
             
         &--smartphone {
             width: 10px;
-            height: 16px;}
+            height: 14px;}
+
+        @media screen and (min-width: 1200px) {
+        &--envelope {
+            width: 16px;
+            height: 12px;
         }
+        
+        &--smartphone {
+            width: 10px;
+            height: 16px;
+        }
+        }
+    }
 
    
 }

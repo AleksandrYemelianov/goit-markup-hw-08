@@ -13,5 +13,9 @@ body {
 }
 
 .section {
-    @extend %section-padding;
+    @include sec-pad(notDesctop-pad);
+
+    @include mq(desktop) {
+        @include sec-pad(desktop-pad);
+    }
 }
