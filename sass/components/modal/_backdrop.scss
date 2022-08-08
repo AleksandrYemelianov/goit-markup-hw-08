@@ -1,21 +1,22 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 3;
 
-    background-color: var(--backdrop-color);
-    opacity: 1;
+        background-color: var(--backdrop-color);
+        opacity: 1;
 
-    transition: opacity var(--transition);
+        transition: opacity var(--transition);
 
-    &.is-hidden {
-            opacity: 0;
-            pointer-events: none;
+        &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
 
-            & .modal {
-                    transform: translate(-60%, -60%) scale(0.8);
+        & .modal {
+        transform: translate(-60%, -60%) scale(0.8);
                 }
         }
 }

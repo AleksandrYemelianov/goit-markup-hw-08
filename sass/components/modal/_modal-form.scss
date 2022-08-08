@@ -8,9 +8,13 @@
         text-align: center;
         margin-bottom: 12px;
 
-        @include font(null, 700, 20px, 1.15, null, null);
+        @include font(null, 700, 20px, 1.5, null, null);
 
         color: var(--primary-text-color);
+
+        @include mq(desktop){
+            @include font(null, null, null, 1.15, null, null);
+        }
     }
 
     &__contacts {
@@ -33,12 +37,14 @@
     &__accept {
         display: block;
         text-align: center;
-        
-        @include font(null, 400, 14px, 1.71, null, null);
-
         padding-left: 18px;
-
+        
+        @include font(null, 400, 12px, 1.17, null, null);
         color: var(--secondary-text-color);
+
+        @include mq(desktop){
+            @include font(null, 400, 14px, 1.71, null, null);
+        }
     }
 
     &__link {

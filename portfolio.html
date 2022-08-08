@@ -32,17 +32,87 @@
           <a href="./index.html" class="logo logo--dark link"
             ><span class="logo logo--accent">Web</span>Studio</a
           >
+          <button
+            type="button"
+            class="mobile-menu-btn"
+            data-menu-button
+            aria-expanded="false"
+          >
+            <svg class="menu-icon" width="40" height="40">
+              <use
+                class="menu-icon__open"
+                href="./images/icons.svg/symbol-defs.svg#mobile-icon-menu"
+              ></use>
+              <use
+                class="menu-icon__close"
+                href="./images/icons.svg/symbol-defs.svg#mobile-icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="mobile-menu" data-menu>
+            <ul class="menu-nav">
+              <li class="menu-nav__item list">
+                <a
+                  class="menu-nav__link menu-nav__link--current link"
+                  href="./index.html"
+                  target="_self"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu-nav__item list">
+                <a
+                  class="menu-nav__link link"
+                  href="./portfolio.html"
+                  target="_self"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu-nav__item list">
+                <a class="menu-nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+            <div class="mobile-menu-group">
+              <ul class="menu-contact">
+                <li class="menu-contact__item list">
+                  <a class="menu-contact__link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="menu-contact__item list">
+                  <a
+                    class="menu-contact__link link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="menu-social">
+                <li class="menu-social__item list" aria-label="Instagram">
+                  <a class="menu-social__link link" href="">Instagram</a>
+                </li>
+                <li class="menu-social__item list" aria-label="Twitter">
+                  <a class="menu-social__link link" href="">Twitter</a>
+                </li>
+                <li class="menu-social__item list" aria-label="Facebook">
+                  <a class="menu-social__link link" href="">Facebook</a>
+                </li>
+                <li class="menu-social__item list" aria-label="LinkedIn">
+                  <a class="menu-social__link link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="list nav__item">
-              <a href="./index.html" target="_self" class="nav__link link"
+              <a
+                href="./index.html"
+                target="_self"
+                class="nav__link nav__link--current link"
                 >Студия</a
               >
             </li>
             <li class="list nav__item">
-              <a
-                href="./portfolio.html"
-                target="_self"
-                class="nav__link nav__link--current link"
+              <a href="./portfolio.html" target="_self" class="nav__link link"
                 >Портфолио</a
               >
             </li>
@@ -336,9 +406,9 @@
     </main>
 
     <!-- Подвал -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer__wrapper">
-        <div>
+        <div class="footer__nav">
           <a href="./index.html" class="logo logo--light link"
             ><span class="logo logo--accent">Web</span>Studio</a
           >
@@ -445,5 +515,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

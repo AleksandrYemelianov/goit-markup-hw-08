@@ -623,7 +623,6 @@ body {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--firsty-bg-color)), to(var(--firsty-bg-color))), url(/images/hero/img_md@2x.jpg);
     background-image: linear-gradient(to right, var(--firsty-bg-color), var(--firsty-bg-color)), url(/images/hero/img_md@2x.jpg);
-    background-size: cover;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -897,9 +896,11 @@ body {
   fill: currentColor;
 }
 
-.footer-social {
-  text-align: center;
-  margin-bottom: 60px;
+@media screen and (max-width: 1199.98px) {
+  .footer-social {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 .footer-social__text {
   display: block;
@@ -975,19 +976,57 @@ body {
 
 .footer {
   background-color: var(--footer-bg-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
-.footer__nav {
-  text-align: center;
-  margin-bottom: 60px;
+@media screen and (max-width: 1199.98px) {
+  .footer__nav {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer__nav {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__nav {
+    margin-right: 70px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 .footer__text {
-  margin-bottom: 9px;
+  display: block;
+  margin-bottom: 8px;
   color: var(--primary-white-color);
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+}
+@media screen and (min-width: 1200px) {
+  .footer__text {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-contact__link {
@@ -1001,9 +1040,13 @@ body {
 .footer-contact__link:hover, .footer-contact__link:focus {
   color: var(--accent-color);
 }
-
-.footer-contact__list .footer-contact__item:not(:last-child) {
-  margin-bottom: 9px;
+.footer-contact__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-contact__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .project-btn__list {
@@ -1111,6 +1154,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 3;
   background-color: var(--backdrop-color);
   opacity: 1;
   -webkit-transition: opacity var(--transition);
@@ -1131,13 +1175,22 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  height: auto;
   background-color: var(--primary-white-color);
   -webkit-transition: -webkit-transform var(--transition);
   transition: -webkit-transform var(--transition);
   transition: transform var(--transition);
   transition: transform var(--transition), -webkit-transform var(--transition);
+}
+@media screen and (max-width: 479.98px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
 }
 .modal__icon {
   width: 11px;
@@ -1252,8 +1305,13 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    line-height: 1.15;
+  }
 }
 .modal-form__contacts {
   display: -webkit-box;
@@ -1279,11 +1337,18 @@ body {
 .modal-form__accept {
   display: block;
   text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   padding-left: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__accept {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal-form__link {
   color: var(--accent-color);
@@ -1319,7 +1384,7 @@ body {
 .checkbox__wrapper {
   position: absolute;
   top: 50%;
-  left: 14px;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1336,6 +1401,11 @@ body {
   -webkit-transition: background-color var(--transition), border-color var(--transition);
   transition: background-color var(--transition), border-color var(--transition);
 }
+@media screen and (min-width: 1200px) {
+  .checkbox__wrapper {
+    left: 5px;
+  }
+}
 .checkbox__input:checked + .checkbox__wrapper {
   background-color: var(--accent-color);
   border-color: transparent;
@@ -1346,6 +1416,18 @@ body {
   fill: var(--primary-white-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .subs-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 50%;
+    margin-left: auto;
+  }
+}
 .subs-form__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1355,6 +1437,19 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .subs-form__wrapper {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subs-form__wrapper {
+    margin-right: 12px;
+    width: 100%;
+  }
+}
 .subs-form__label {
   margin-bottom: 20px;
   font-weight: bold;
@@ -1362,7 +1457,11 @@ body {
   line-height: 1.14;
   color: var(--primary-white-color);
   text-transform: uppercase;
-  text-align: center;
+}
+@media screen and (max-width: 1199.98px) {
+  .subs-form__label {
+    text-align: center;
+  }
 }
 .subs-form__icon {
   width: 24px;
@@ -1377,7 +1476,11 @@ body {
   border-radius: 4px;
   outline: transparent;
   background-color: transparent;
-  margin-bottom: 20px;
+}
+@media screen and (max-width: 1199.98px) {
+  .subs-form__input {
+    margin-bottom: 20px;
+  }
 }
 .subs-form__input::-webkit-input-placeholder {
   font-size: 16px;

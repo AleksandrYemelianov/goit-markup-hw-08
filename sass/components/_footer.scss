@@ -1,33 +1,47 @@
 .footer {
-    // @include flexbox (flex, null, null, null, null);
-
+    // @include mq(desktop){
+    //      @include flexbox (flex, null, null, null, null);
+    // }
     background-color: var(--footer-bg-color);
 
-    padding-top: 60px;
-    padding-bottom: 60px;
-
     &__nav {
+        @include mq(notDesktop){
         text-align: center;
         margin-bottom: 60px;
-
+        }
+        @include mq (tablet-only) {
+            margin-right: 165px;
+        }
+        @include mq(desktop) {
+            margin-right: 70px;
+        }
     }
-        &__wrapper {
-            // @include flexbox (flex, null, null, baseline, null);
+    &__wrapper {
+        @include mq (tablet-only) {
+            @include flexbox (flex, null, center, null, wrap);
         }
-    
-        &__text {
-            // @include flexbox (block, null, null, null, null);
-            margin-bottom: 9px;
-            color: var(--primary-white-color);
+        @include mq(desktop) {
+            @include flexbox (flex, null, null, baseline, null);
+        }
+    }
 
-            @include font (null, null, 14px, 1.71, null);
-            
+    &__text {
+        @include flexbox (block, null, null, null, null);
+        margin-bottom: 8px;
+        color: var(--primary-white-color);
+
+        @include font (null, null, 14px, 1.71, null);
+        
+        @include mq (desktop) {
+        margin-bottom: 9px;
         }
+    }
 }
 
 
 
-.footer-contact__link {
+.footer-contact {
+    &__link {
     color: var(--telemail-footer-color);
 
     @include font (null, null, 14px, 1.71, null);
@@ -38,10 +52,15 @@
         &:focus {
             color: var(--accent-color);
         }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
+
+        @include mq(desktop) {
+        margin-bottom: 9px;
+        }
+    }
 }
 
 
-
-.footer-contact__list .footer-contact__item:not(:last-child) {
-    margin-bottom: 9px;
-}

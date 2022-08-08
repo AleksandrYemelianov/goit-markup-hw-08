@@ -44,9 +44,11 @@
 
 // Дополнительные социальные иконки
 .footer-social {
+    @include mq(notDesktop) {
     text-align: center;
     margin-bottom: 60px;
-
+    }
+    
     &__text {
         @include flexbox (block, null, null, null, null);
         margin-bottom: 20px;
